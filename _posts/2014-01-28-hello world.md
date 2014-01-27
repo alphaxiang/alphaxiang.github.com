@@ -1,6 +1,7 @@
 ---
 layout: post
-categories: [All pages]
+title: hello world
+categories: [Pages]
 tags: [github]
 ---
 

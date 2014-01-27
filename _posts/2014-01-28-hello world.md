@@ -1,7 +1,7 @@
 ---
 layout: post
-categories: [Pages]
+categories: [All pages]
 tags: [github]
 ---
 
-Hello ,world ,this is alphaxiang's first post on github~~~
+Hello world ,this is alphaxiang's first post on github~~~

@@ -264,8 +264,8 @@ Node *Row;
 Node Head;
 BOOL flag[1789];
 
-BOOL InitDLX()
-{
+BOOL InitDLX() {
+
  int i;
  nPiece=0;
  Coloum=(Node*)malloc( 67*sizeof(Node) );
@@ -282,6 +282,7 @@ BOOL InitDLX()
  Head.left=&Head;
  
  for(i=0;i<67;i++) {
+
     Coloum[i].c=i;
     Coloum[i].r=0;
     ColoumCounter[i]=0;
@@ -297,11 +298,11 @@ BOOL InitDLX()
  }
  
   for(i=0;i<1789;i++)  {
+
     Row[i].r=i;
     Row[i].c=67;
     Row[i].right=&Row[i];
     Row[i].left=&Row[i];
-
     Row[i].up=&Head;
     Row[i].Down=Row[i].up->Down;
     Row[i].up->Down=&Row[i];
@@ -312,8 +313,8 @@ BOOL InitDLX()
 
 }
 
-Node * GetNode()
-{
+Node * GetNode() {
+
  Node *p;
  p=(Node*)malloc( sizeof(Node) );
  return p;
@@ -344,6 +345,7 @@ BOOL insertrc(int c,int r) {
  return TRUE;
 
 }
+
 //delete whole colum
 void Remove_C(int c) {
 	
@@ -369,8 +371,8 @@ void Remove_C(int c) {
 }
 
 //resume whole colum
-void Resume_C(int c)
-{
+void Resume_C(int c) {
+
    Node *p;
    Node*Tr;
    Node*Tc;
@@ -394,27 +396,11 @@ void Resume_C(int c)
     p->right->left=p;
 }
 
-void Print_Piece( Piece obj)
-{
-  int i,j;
-  
-  printf ("\n%d   %d   \n",obj.wide,obj.length);
-  
-  for (i=0;i<4;i++) {
-    	
-        for(j=0;j<4;j++)   
-            printf("%d ",obj.BitMap[i][j]);
-            
-        printf("\n");
-  }
-    
-  printf("\n");
-}
 
 /*left-top algin one piece  */
-void Normalize(Piece *input,Piece *Output)
-{
-    int i,j,sx,sy;
+void Normalize(Piece *input,Piece *Output) {
+
+     int i,j,sx,sy;
 
      memset(Output,0x00,sizeof(Piece));
 
@@ -448,8 +434,8 @@ void Normalize(Piece *input,Piece *Output)
 }
 
 
-void Rotate_R90(Piece *input,Piece *Output)
-{
+void Rotate_R90(Piece *input,Piece *Output) {
+
     int i,j;
     Piece Temp;
     Temp.length=input->wide;
@@ -463,8 +449,8 @@ void Rotate_R90(Piece *input,Piece *Output)
 }
 
 
-void mirror(Piece *input,Piece *output)
-{
+void mirror(Piece *input,Piece *output) {
+
   int i,j;
 
   memset(output,0x00,sizeof(Piece));
@@ -472,16 +458,13 @@ void mirror(Piece *input,Piece *output)
   output->wide=input->wide;
  
   for(i=0;i<input->length;i++)
-  for(j=0;j<input->wide;j++)       
-      {
-          output->BitMap[i][input->wide-j-1]=input->BitMap[i][j];
-      }
-
+       for(j=0;j<input->wide;j++) 
+           output->BitMap[i][input->wide-j-1]=input->BitMap[i][j];
 }
 
 
-char IsSame(Piece a,Piece b)
-{
+char IsSame(Piece a,Piece b) {
+
   int i,j;
 
   if((a.length!=b.length) || (a.wide!=b.wide))
@@ -489,15 +472,13 @@ char IsSame(Piece a,Piece b)
 
   for(i=0;i<4;i++)
       for(j=0;j<4;j++)
-      {
-          if(a.BitMap[i][j]!=b.BitMap[i][j]) return 0;
-      }
-
+         if(a.BitMap[i][j]!=b.BitMap[i][j]) return 0;
+      
     return 1;
 }
 
-int PreProcess(Piece obj,int xx)
-{
+int PreProcess(Piece obj,int xx) {
+
  Piece Buf[8];
  Piece Temp,Rotated;
  int i,k,counter=0;
@@ -509,40 +490,38 @@ int PreProcess(Piece obj,int xx)
  Buf[counter++]=Temp;
  j=(6-Temp.length)*(12-Temp.wide);
 
- for(i=0;i<4;i++)
- {
+ for(i=0;i<4;i++)  {
+ 
     Rotate_R90(&Temp,&Temp);
 
-    for(k=0;k<counter;k++)
-    {
+    for(k=0;k<counter;k++)  {
+    
       if(1==IsSame(Buf[k],Temp)) break;
     }
 
-    if(k==counter)
-    {
-       Buf[counter++]=Temp;
-    }
+    if(k==counter) Buf[counter++]=Temp;
+    
 
  }
 
  Temp=Rotated;
- for(i=0;i<4;i++)
- {
+ 
+ for(i=0;i<4;i++) {
+ 
     Rotate_R90(&Temp,&Temp);
 
-    for(k=0;k<counter;k++)
-    {
+    for(k=0;k<counter;k++)  {
+    
       if(1==IsSame(Buf[k],Temp)) break;
     }
 
-    if(k==counter)
-    {
-       Buf[counter++]=Temp;
-    }
+    if(k==counter) Buf[counter++]=Temp;
+    
 
  }
-  for(i=0;i<counter;)
-  {
+ 
+ for(i=0;i<counter;) {
+  
   All[nPiece]=Buf[i++];
   Table[nPiece++]=xx;
   }
@@ -550,8 +529,8 @@ int PreProcess(Piece obj,int xx)
  return counter;
 }
 
-void PutOnePiece(int index,int px,int py,char rowBuf[67])
-{
+void PutOnePiece(int index,int px,int py,char rowBuf[67]) {
+
  int i,j;
  memset(rowBuf,'0',67);
    
@@ -559,20 +538,21 @@ void PutOnePiece(int index,int px,int py,char rowBuf[67])
  
 
  for(i=0;i<All[index].length;i++)
-  for(j=0;j<All[index].wide;j++)
-  {
-   if(All[index].BitMap[i][j]==1)
-   {
-    rowBuf[11*(py+i)+px+j]='1';
-    insertrc(11*(py+i)+px+j,columCounter);
-   }
-  }
-  insertrc(55+Table[index],columCounter);
+
+     for(j=0;j<All[index].wide;j++) {
+     
+       if(All[index].BitMap[i][j]==1) {
+           rowBuf[11*(py+i)+px+j]='1';
+           insertrc(11*(py+i)+px+j,columCounter);
+       }
+     }
+     
+     insertrc(55+Table[index],columCounter);
 }
 
 
-BOOL Kanoodle(int step)
-{
+BOOL Kanoodle(int step)  {
+
  int i,j,k,h=0;
  Node *Tp;
  Node *tt;
@@ -580,19 +560,21 @@ BOOL Kanoodle(int step)
  char szBuf[69];
  char BitMap[67];
 
-
- if(Head.right==&Head)//links has been empty ,get a solution
- {
-
+ //links has been empty ,get a solution
+ if(Head.right==&Head) {
+ 
     fpBitmap=fopen("BitMap.text","r+");
 
-    for(i=0;i<1789;i++)
-    {
+    for(i=0;i<1789;i++) {
+    
        if(flag[i]!=0) {
+
          fseek(fpBitmap, 69*i, SEEK_SET);
          fread(BitMap,67,1,fpBitmap);
+
          for(j=0;j<12;j++) {
-           if(BitMap[55+j]=='1') break;
+
+            if(BitMap[55+j]=='1') break;
          }
          
          for(k=0;k<55;k++)if(BitMap[k]=='1')szBuf[k]='A'+j;
@@ -663,8 +645,9 @@ BOOL Kanoodle(int step)
   Resume_C(i);
   return FALSE;
 }
-int main()
-{
+
+
+int main() {
     int i,j,k,h=0;
     FILE *fpBitmap;
     char szBuf[69];

@@ -1,0 +1,10 @@
+---
+layout: page
+title : About Me
+header : Post Archive
+group: navigation
+---
+{% include JB/setup %}
+
+name :alphaxiang
+email:1907767981@qq.com

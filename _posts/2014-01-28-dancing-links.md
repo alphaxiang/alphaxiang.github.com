@@ -14,8 +14,11 @@ kanoodle拼图转化为dancing links可处理的问题,以及代码上如何实�
 Kanoodle游戏的目的是把12块形状各不相同的小东西放入一个5\*11的矩形框内.没有空隙,也没有覆盖,如图:
 
 <img src="http://alphaxiang.com/image/kanoodle_1.jpeg" alt="Nature">
-一种可行的放置为 :                                                                                        
-<img src="http://alphaxiang.com/image/kanoodle_2.jpeg" alt="Nature">
+
+一种可行的放置为 :           
+
+<img src="http://alphaxiang.com/image/kanoodle_2.jpeg" alt="Nature">   
+
 这其实可以转化为一个Exect Cover问题,有两个限制条件:
 
 1: 5\*11的矩形框每一个框必须被覆盖
@@ -55,7 +58,8 @@ Kanoodle游戏的目的是把12块形状各不相同的小东西放入一个5\*1
 找一块空白位置,放下这一块,5\*11的矩形框内某些位置将会被覆盖.记下所有可能放入情况.例如将A放入5\*11格内有很多种方法,把所有可能方法记录下来,需要记录的是放入A后哪些格子被A占据了
 
 Kanoodle有12个小块如图:                                                
-<img src="http://alphaxiang.com/image/kanoodle_3.jpeg" alt="Nature">                      
+<img src="http://alphaxiang.com/image/kanoodle_3.jpeg" alt="Nature">     
+
 由于存在平移,旋转,对称变换,因此每个小块都对应着不同的方法.
 
 

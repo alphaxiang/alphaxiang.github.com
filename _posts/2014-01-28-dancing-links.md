@@ -14,9 +14,9 @@ kanoodle拼图转化为dancing links可处理的问题,以及代码上如何实�
 Kanoodle游戏的目的是把12块形状各不相同的小东西放入一个5\*11的矩形框内.没有空隙,也没有覆盖,如图:
 
 <img src="http://alphaxiang.com/image/kanoodle_1.jpeg" alt="Nature">
-<p>一种可行的放置为:<\p>
+<p>一种可行的放置为<\p>
 <img src="http://alphaxiang.com/image/kanoodle_2.jpeg" alt="Nature">
-<p>这其实可以转化为一个Exect Cover问题,有两个限制条件:<\p>
+<p>这其实可以转化为一个Exect Cover问题,有两个限制条件<\p>
 
 1: 5\*11的矩形框每一个框必须被覆盖
 

@@ -3,9 +3,7 @@ layout: post
 title: perfect shuffle 算法的一个线性复杂度实现
 tags:  perfect_shuffle
 ---
-
 <head>
-    <script>
     <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
@@ -18,4 +16,4 @@ tags:  perfect_shuffle
                             July 2004 
 问题描述： 
 所谓完美洗牌算法即是把输入为: 
-\\(a_{1}\\),\\(a_{2}\\) ,........ ,\\(a_{n}\\),\\(b_{1}\\),\\(b_{2}\\) ,......... , \\(b_{n}\\)的序列变为 
+\\( a_{1} \\),\\( a_{2} \\) ,........ ,\\( a_{n} \\),\\( b_{1} \\),\\( b_{2} \\) ,......... , \\( b_{n} \\)的序列变为 

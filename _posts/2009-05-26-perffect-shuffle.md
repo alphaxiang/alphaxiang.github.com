@@ -1,7 +1,7 @@
 ---
 layout: post
 title: perfect shuffle 的一个线性复杂度实现
-tags:  perfect_shuffle
+tags:  algorithm
 ---
 
 今天又发现一个关于完美洗牌的算法。这个比较简单一些，由 microsoft的Peiyush Jain提出。

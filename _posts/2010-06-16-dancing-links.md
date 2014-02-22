@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use Dancing Links Solve Kanoodle
-tags:  kanoodle
+tags:  algorithm
 ---
 
 original ：[http://www.ams.org/samplings/feature-column/fcarc-kanoodle](http://www.ams.org/samplings/feature-column/fcarc-kanoodle)

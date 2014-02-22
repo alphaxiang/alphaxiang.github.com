@@ -8,11 +8,11 @@ tags:  algorithm
 
 原论文：    
 
-A Simple In-Place Algorithm for In-Shuffle
-
-                 Peiyush Jain, Microsoft Corporation
-                 
+A Simple In-Place Algorithm for In-Shuffle          
+                 Peiyush Jain, Microsoft Corporation           
                             July 2004 
+                            
+                            
 问题描述： 
 
 所谓完美洗牌算法即是把输入为: 

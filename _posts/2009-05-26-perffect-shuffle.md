@@ -6,8 +6,12 @@ tags:  algorithm
 
 今天又发现一个关于完美洗牌的算法。这个比较简单一些，由 microsoft的Peiyush Jain提出。
 
-原论文：      A Simple In-Place Algorithm for In-Shuffle. 
-                 Peiyush Jain, Microsoft Corporation. 
+原论文：    
+
+A Simple In-Place Algorithm for In-Shuffle
+
+                 Peiyush Jain, Microsoft Corporation
+                 
                             July 2004 
 问题描述： 
 

@@ -14,8 +14,7 @@ A Simple In-Place Algorithm for In-Shuffle
                             
                             
 问题描述： 
-<p class="excerpt">
-<!--excerpt-->
+
 所谓完美洗牌算法即是把输入为: 
 a_1,a_2,...,a_n,b_1,b_2,...b_n的序列变为                
 
@@ -23,8 +22,7 @@ b_1,a_1,b_2,a_2.......b_n,a_n
 
 这是in perfect shufle。相对应的还有out perfect shuffle。两者区别在于首尾元素位置变或不变。
 perfect shuffle算法要求在O(n），时间内，O(1）空间内完成。 
-<!--excerpt-->
-</p>
+
 
 perfect shuffle实质是一个置换。置换为：
                                        i -> 2 * i mod (2 * n+1) 

@@ -4,7 +4,11 @@ title: Identify the position of the LSB
 tags:  algorithm
 ---
 
+<p class="excerpt">
+<!--excerpt-->
 前段时间看到一段代码用于计算一个32位二进制数的最低为一的位的位置,一直没想到怎么证明它的正确性.今天终于有点头绪了,但仍不知道对不对.暂且记在这里.
+<!--excerpt-->
+</p>
 
 {% highlight c %}
 

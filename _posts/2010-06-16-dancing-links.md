@@ -8,10 +8,13 @@ original ：[http://www.ams.org/samplings/feature-column/fcarc-kanoodle](http://
 
 This article will describe how to represent Kanoodle as an "exact cover problem" and how Donald Knuth implemented an algorithm to find solutions to exact cover problems. We'll also see how to solve Sudoku puzzles using these ideas....
 
+<p class="excerpt">
+<!--excerpt-->
 在这篇文章里面介绍了如何通过dancing links算法完成kanoodle拼图游戏,里面对dancing links算法进行了详细的介绍.但我觉得对于
 如何将kanoodle拼图游戏转化为dancing links可处理的问题,以及代码上如何实现介绍得并不详细.本文所想要做的就是介绍如何将
 kanoodle拼图转化为dancing links可处理的问题,以及代码上如何实现
-
+<!--excerpt-->
+</p>
 Kanoodle游戏的目的是把12块形状各不相同的小东西放入一个5\*11的矩形框内.没有空隙,也没有覆盖,如图:
 
 <img src="http://alphaxiang.com/image/kanoodle_1.jpeg" alt="Nature">

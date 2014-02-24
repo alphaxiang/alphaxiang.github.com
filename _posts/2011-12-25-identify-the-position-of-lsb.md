@@ -13,16 +13,18 @@ tags:  algorithm
 #define    u      99
 int ntz8a( unsigned x )
 {
-static char table[64] ={
+    static char table[64] ={
       32, 0, 1,12,  2, 6, u,13, 3, u, 7, u,  u, u, u,14,  
       10, 4, u, u,  8, u, u,25,  u, u, u, u,  u,21,27,15,
       31,11, 5, u,  u, u, u, u,  9, u, u,24,  u, u,20,26,  
       30, u, u, u,  u,23, u,19, 29, u,22,18, 28,17,16, u
-                      };
+    };
+    
     x = ( x & -x );
     x = ( x << 4 ) + x;    
     x = ( x << 6 ) + x;                                  
-    x = ( x << 16 ) - x;                                
+    x = ( x << 16 ) - x;     
+    
     return table[ x>>26 ];
 }
 
